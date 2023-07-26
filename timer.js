@@ -22,8 +22,7 @@ export default class Timer {
         })
         
         this.$el.reset.addEventListener("click", () => {
-            const inputMinutes = prompt("Enter number of minutes:");
-            // const inputMinutes = Number(prompt("Enter number of minutes").replaceAll(" ", "").replaceAll(" ", "").trim());
+            const inputMinutes = Number(prompt("Enter number of minutes").replaceAll(" ", "").replaceAll(" ", "").trim());
             
             if(inputMinutes <= 60) { 
                 this.stop();
@@ -95,15 +94,3 @@ export default class Timer {
         `;
     }
 }
-
-// export default class User
-// {
-// 	constructor(params)
-// 	{
-// 		this.name=params.name;
-// 		this.lang=params.lang;
-// 		console.log('constructor of User class called: ');
-// 		console.log(this.name+' is your name.');
-// 		console.log(this.lang+' is your language');
-// 	}
-// }
